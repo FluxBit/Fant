@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C96EC036-40D3-4DBA-812A-BBFCCCBB7DEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fant</RootNamespace>
+    <AssemblyName>Fant</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Card.cs" />
+    <Compile Include="Controls\CardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CardControl.Designer.cs">
+      <DependentUpon>CardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Deck.cs" />
+    <Compile Include="Controls\DeckControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DeckControl.Designer.cs">
+      <DependentUpon>DeckControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DrawLotsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DrawLotsControl.Designer.cs">
+      <DependentUpon>DrawLotsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAction.Designer.cs">
+      <DependentUpon>frmAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeck.Designer.cs">
+      <DependentUpon>frmDeck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGame.Designer.cs">
+      <DependentUpon>frmGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Game.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Controls\PlayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PlayerControl.Designer.cs">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPositions.Designer.cs">
+      <DependentUpon>frmPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\CardControl.resx">
+      <DependentUpon>CardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DeckControl.resx">
+      <DependentUpon>DeckControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DrawLotsControl.resx">
+      <DependentUpon>DrawLotsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAction.resx">
+      <DependentUpon>frmAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeck.resx">
+      <DependentUpon>frmDeck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGame.resx">
+      <DependentUpon>frmGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PlayerControl.resx">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPositions.resx">
+      <DependentUpon>frmPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PickCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toGameIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos38.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos39.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos40.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
